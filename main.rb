@@ -3,6 +3,4 @@ require_relative 'validator'
 
 user = Client.new 'Mary'
 
-token = Validator.new user.token
-p token.valid?
-
+p Validator.new(user.token).valid?

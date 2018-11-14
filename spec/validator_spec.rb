@@ -4,7 +4,7 @@ require './client'
 describe Validator do
   before do
     @user_token = Client.new('foo').token
-    @checking_out_token = Validator.new(@user_token).send:data, {name: 'bar'}
+    @checking_out_token = Validator.new(@user_token).send :data, {name: 'bar'}
   end
 
   it 'tokens: different data/the same rsa keys' do
